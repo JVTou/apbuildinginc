@@ -8,14 +8,14 @@ const navigation = [
   { name: "Testimonial", href: "#testimonial" },
   { name: "Team", href: "#team" },
   { name: "Contact Us", href: "#contactus" },
-  { name: "Projects", href: "/page.html" },
+  { name: "Projects Album", href: "#projects" },
 ];
 const NavBar = () => {
   const [active, setActive] = useState("Home");
 
   return (
     <div className="sticky top-0 z-50 flex justify-center py-4">
-      <div className="navbar max-w-xs rounded-full bg-base-100/90 py-0 shadow-2xl outline outline-base-content/5 backdrop-blur md:max-w-4xl">
+      <div className="navbar max-w-xs rounded-full bg-base-100/90 py-0 shadow-2xl outline outline-base-content/5 backdrop-blur md:max-w-5xl">
         <div className="navbar-start">
           <div className="dropdown">
             <div
@@ -50,7 +50,7 @@ const NavBar = () => {
           </div>
           <a
             href="/"
-            className="btn btn-ghost rounded-full font-urbanist text-md font-semibold"
+            className="hidden md:inline btn btn-ghost rounded-full font-urbanist text-lg font-semibold"
           >
             <div className="w-12">
               <div className="rounded object-contain">
@@ -60,21 +60,28 @@ const NavBar = () => {
             AP Building Inc.
           </a>
         </div>
-        <div className="navbar-center ml-10 hidden lg:flex">
-          {navigation.map((item, index) => (
-            <nav key={index} className="menu menu-horizontal px-1">
-              <a
-                key={item.name}
-                href={item.href}
-                className={`btn btn-ghost rounded-full font-urbanist text-sm font-light ${
-                  active === item.name ? "bg-base-300" : ""
-                }`}
-                onClick={() => setActive(item.name)}
-              >
-                {item.name}
-              </a>
-            </nav>
-          ))}
+        <div className="navbar-center">
+          <div className="w-12">
+            <div className="rounded object-contain">
+              <img src="/images/icons/ap_logo.png" />
+            </div>
+          </div>
+          <div className="ml-10 hidden lg:flex">
+            {navigation.map((item, index) => (
+              <nav key={index} className="menu menu-horizontal px-1">
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className={`btn btn-ghost rounded-full font-urbanist text-sm font-light ${
+                    active === item.name ? "bg-base-300" : ""
+                  }`}
+                  onClick={() => setActive(item.name)}
+                >
+                  {item.name}
+                </a>
+              </nav>
+            ))}
+          </div>
         </div>
 
         <div className="navbar-end h-10 scale-75">
