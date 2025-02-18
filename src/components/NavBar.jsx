@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Toggle } from "react-hook-theme";
 import "react-hook-theme/dist/styles/style.css";
+import ThemeChooser from "./ThemeProvider";
 
 const navigation = [
   { name: "Home", href: "#home" },
@@ -50,7 +50,7 @@ const NavBar = () => {
           </div>
           <a
             href="/"
-            className="hidden md:inline btn btn-ghost rounded-full font-urbanist text-lg font-semibold"
+            className="hidden md:flex btn btn-ghost rounded-full font-urbanist text-lg font-semibold"
           >
             <div className="w-12">
               <div className="rounded object-contain">
@@ -61,7 +61,7 @@ const NavBar = () => {
           </a>
         </div>
         <div className="navbar-center">
-          <div className="w-12">
+          <div className="w-12 md:hidden">
             <div className="rounded object-contain">
               <img src="/images/icons/ap_logo.png" />
             </div>
@@ -85,7 +85,7 @@ const NavBar = () => {
         </div>
 
         <div className="navbar-end h-10 scale-75">
-          <Toggle />
+          <ThemeChooser />
         </div>
       </div>
     </div>
