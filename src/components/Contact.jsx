@@ -187,7 +187,7 @@ const Contact = () => {
             <div className="card-body mx-auto w-full overflow-hidden rounded-lg px-8 py-10 shadow-xl outline outline-base-content/5 lg:max-w-xl">
               <h1 className="card-title">Ask us anything</h1>
 
-              <form className="mt-6">
+              <form className="mt-6" netlify name="contact">
                 <div className="flex-1">
                   <label htmlFor="name" className="mb-2 block text-sm">
                     Full Name
@@ -226,7 +226,10 @@ const Contact = () => {
                   ></textarea>
                 </div>
 
-                <button className="btn btn-neutral mt-6 w-full transform px-6 py-3 text-sm font-medium capitalize duration-300  ">
+                <button
+                  className="btn btn-neutral mt-6 w-full transform px-6 py-3 text-sm font-medium capitalize duration-300"
+                  type="submit"
+                >
                   get in touch
                 </button>
               </form>
