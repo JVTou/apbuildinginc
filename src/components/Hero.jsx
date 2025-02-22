@@ -17,15 +17,16 @@ const Hero = () => {
         variants={fadeIn("up", "tween", 0.2, 1)}
         className="z-10 hero-content flex-col lg:flex-row-reverse items-center lg:items-start"
       >
-        {/* Image - Prevents shifting */}
-        <img
-          src="/images/featured/IMG_2371.jpg"
-          alt="AP Painting Division"
-          loading="lazy"
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
           className="max-w-xs rounded-b-box rounded-t-[14rem] shadow-2xl outline outline-base-content/5 md:max-w-md"
-        />
-
-        {/* Typewriter Wrapper */}
+          src="/images/featured/painting.mp4"
+        >
+          Your browser does not support the video tag.
+        </video>
         <div className="text-center lg:text-start flex flex-col justify-center items-center lg:items-start min-w-2/3">
           <div className="font-urbanist text-3xl font-black uppercase md:text-7xl">
             AP Building Maintenance Inc.
