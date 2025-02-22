@@ -85,7 +85,7 @@ const LogoParticles = () => {
           density: {
             enable: true,
           },
-          value: 100,
+          value: 20,
         },
         opacity: {
           value: 0.5,
@@ -94,7 +94,7 @@ const LogoParticles = () => {
           type: "circle",
         },
         size: {
-          value: { min: 1, max: 5 },
+          value: { min: 1, max: 4 },
         },
       },
       detectRetina: true,
