@@ -16,10 +16,10 @@ const Contact = () => {
         variants={fadeIn("up", "tween", 0.2, 1)}
         className="flex w-full flex-col justify-center"
       >
-        <h1 className="text-center font-urbanist text-2xl font-semibold md:text-5xl">
+        <h1 className="z-10 text-center font-urbanist text-2xl font-semibold md:text-5xl">
           Get in touch
         </h1>
-        <span className="text-md mt-2 px-2 text-center font-urbanist md:mt-4 md:px-5 md:text-xl">
+        <span className="z-10 text-md mt-2 px-2 text-center font-urbanist md:mt-4 md:px-5 md:text-xl">
           Contact us now and scale your business
         </span>
       </motion.div>
@@ -28,7 +28,7 @@ const Contact = () => {
         className="container mx-auto px-6 py-10"
       >
         <div className="lg:-mx-6 lg:flex lg:items-center">
-          <div className="lg:mx-0 lg:mt-0 lg:flex lg:w-1/2 lg:flex-col lg:items-center">
+          <div className="z-10 lg:mx-0 lg:mt-0 lg:flex lg:w-1/2 lg:flex-col lg:items-center">
             <div className="mt-6 space-y-8 md:mt-8">
               <p className="-mx-2 flex items-start">
                 <svg
@@ -183,7 +183,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="card mt-8 lg:mx-6 lg:w-1/2">
+          <div className="z-10 card mt-8 lg:mx-6 lg:w-1/2">
             <div className="card-body mx-auto w-full overflow-hidden rounded-lg px-8 py-10 shadow-xl outline outline-base-content/5 lg:max-w-xl">
               <h1 className="card-title">Ask us anything</h1>
 

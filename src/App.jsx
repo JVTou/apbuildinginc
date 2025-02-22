@@ -1,7 +1,9 @@
 import Contact from "./components/Contact";
 import ElectricalPhotoAlbum from "./components/ElectricalPhotoAlbum";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import LogoClouds from "./components/LogoClouds";
+import LogoParticles from "./components/LogoParticles";
 import NavBar from "./components/NavBar";
 import PaintingPhotoAlbum from "./components/PaintingPhotoAlbum";
 import Services from "./components/Services";
@@ -18,8 +20,10 @@ function App() {
       <Testimonial />
       <Team />
       <Contact />
+      <LogoParticles />
       <ElectricalPhotoAlbum />
       <PaintingPhotoAlbum />
+      <Footer />
     </div>
   );
 }

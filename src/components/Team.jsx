@@ -61,10 +61,10 @@ const Team = () => {
         variants={fadeIn("up", "tween", 0.2, 1)}
         className="flex flex-col items-center justify-center"
       >
-        <h1 className="font-urbanist text-center text-2xl font-semibold md:text-5xl">
+        <h1 className="z-10 font-urbanist text-center text-2xl font-semibold md:text-5xl">
           Our Team
         </h1>
-        <span className="text-md font-urbanist mt-4 px-2 text-center md:mt-4 md:px-5 md:text-xl">
+        <span className="z-10 text-md font-urbanist mt-4 px-2 text-center md:mt-4 md:px-5 md:text-xl">
           our team collaborates seamlessly to succeed on your projects.
         </span>
       </motion.div>
@@ -75,7 +75,7 @@ const Team = () => {
         {team.map((item, index) => (
           <div
             key={index}
-            className="card w-80 border border-base-content/10 shadow-sm lg:w-96"
+            className="z-10 card w-80 border border-base-content/10 shadow-sm lg:w-96"
           >
             <figure className="lpx-10 pt-10">
               <img

@@ -11,11 +11,11 @@ const Hero = () => {
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
       id="home"
-      className="hero py-10 flex justify-center"
+      className="hero py-10 flex justify-center "
     >
       <motion.div
         variants={fadeIn("up", "tween", 0.2, 1)}
-        className="hero-content flex-col lg:flex-row-reverse items-center lg:items-start"
+        className="z-10 hero-content flex-col lg:flex-row-reverse items-center lg:items-start"
       >
         {/* Image - Prevents shifting */}
         <img
@@ -27,25 +27,33 @@ const Hero = () => {
 
         {/* Typewriter Wrapper */}
         <div className="text-center lg:text-start flex flex-col justify-center items-center lg:items-start min-w-2/3">
-          <div className="md:h-[420px] md:w-[720px] font-urbanist text-3xl font-black uppercase md:text-7xl">
-            <Typewriter
-              onInit={(typewriter) => {
-                typewriter
-                  .typeString(
-                    `Building Maintenance\n
-                      <span class="text-primary">Painting</span>\n
-                      <span class="text-accent">Electrical</span>\n
-                      <span class="text-base-content/30">Serving Southern California</span>`
-                  )
-                  .pauseFor(Infinity) // Keeps the text after typing
-                  .start();
-              }}
-              options={{
-                delay: 30, // Faster typing speed
-                cursor: "|",
-                parseHTML: true,
-              }}
-            />
+          <div className="font-urbanist text-3xl font-black uppercase md:text-7xl">
+            AP Building Maintenance Inc.
+            <div className="h-[4.5rem] md:h-[9rem] md:w-[720px]">
+              <Typewriter
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString(`<span class="text-primary">Painting</span>`)
+                    .pauseFor(2500)
+                    .deleteAll()
+                    .typeString(
+                      `<span class="text-secondary">Building Maintenance</span>`
+                    )
+                    .pauseFor(2500)
+                    .deleteAll()
+                    .typeString(`<span class="text-accent">Electrical</span>`)
+                    .pauseFor(2500)
+                    .start();
+                }}
+                options={{
+                  loop: true,
+                  delay: 30,
+                  cursor: "|",
+                  parseHTML: true,
+                }}
+              />
+            </div>
+            <span className="text-info">Serving Southern California</span>
           </div>
           <div className="py-6 flex gap-2 max-lg:justify-center">
             <a
